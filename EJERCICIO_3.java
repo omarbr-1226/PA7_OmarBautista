@@ -36,48 +36,43 @@ public class EJERCICIO_3 {
         /*Pedir datos de nombre al usuario*/
         for (i = 0; i < T; i++) {
             System.out.println("Ingresa tu nombre Completo");
-            for (i=0; i<T; i++) {
-                nombre[i] = sc.next();
-                /*Pedir datos de de numero de lista al usuario*/
-                do {
+            nombre[i] = sc.next();
+            /*Pedir datos de de numero de lista al usuario*/
+            /*Bucle para controlar que se ingresen numeros de lista validos*/
+            do {
+                System.out.println("Ingresa tu numero de lista: ");
+                lista[i] = sc.nextInt();
+                if (lista[i]>T || lista[i]==0){
+                    System.out.println("Numero de lista no valido");
+                }
+            }while (lista[i]==0);
 
-                    for (i = 0; i < T; i++) {
-                        System.out.println("Ingresa tu numero de lista: ");
-                        lista[i] = sc.nextInt();
-                        if (lista[i]>T || lista[i]==0){
-                            System.out.println("Numero de lista no valido");
-                        }else
-                            break;
-                    }
-                }while (lista[i]>T);
-
+            for ( int j=0; j<T; j++) {
                 /*Calificaciones pedidas al usuario*/
-                do {
+                /*Bucle para que se ingresen valores aceptados de acuerdo al planteamiento*/
+                /*do {*/
                     for (i = 0; i < T; i++) {
                         System.out.println("Ingresa la calificacion de la unidad uno:");
                         unidadUno[i] = sc.nextInt();
                         if (unidadUno[i]>10){
                             System.out.println("Calificacion no valida");
-                        }else
-                            break;
+                        }
+                        for (i = 0; i < T; i++) {
+                            System.out.println("Ingresa la calificacion de la unidad dos:");
+                            unidadDos[i] = sc.nextInt();
+                            if (unidadUno[i]>10){
+                                System.out.println("Calificacion no valida");
+                            }
+                            for (i = 0; i <T; i++) {
+                                System.out.println("Ingresa la calificacion de la unidad tres:");
+                                unidadTres[i] = sc.nextInt();
+                                if (unidadUno[i]>10){
+                                    System.out.println("Calificacion no valida");
+                                }
+                            }
+                        }
                     }
-                    for (i = 0; i < T; i++) {
-                        System.out.println("Ingresa la calificacion de la unidad dos:");
-                        unidadDos[i] = sc.nextInt();
-                        if (unidadUno[i]>10){
-                            System.out.println("Calificacion no valida");
-                        }else
-                            break;
-                    }
-                    for (i = 0; i < T; i++) {
-                        System.out.println("Ingresa la calificacion de la unidad tres:");
-                        unidadTres[i] = sc.nextInt();
-                        if (unidadUno[i]>10){
-                            System.out.println("Calificacion no valida");
-                        }else
-                            break;
-                    }
-                }while (unidadUno[i]>10 || unidadDos[i]>10 || unidadTres[i]>10);
+                /*}while (unidadUno[i]>10 || unidadDos[i]>10 || unidadTres[i]>10);*/
             }
         }
 
@@ -86,7 +81,7 @@ public class EJERCICIO_3 {
 
 
         /*Promedio*/
-        for (i=0; i<T; i++){
+        /*for (i=0; i<T; i++){
             promedio[i]=unidadUno[i]+unidadDos[i]+unidadTres[i];
         }
         for ( i = 0; i < T; i++) {
@@ -96,6 +91,8 @@ public class EJERCICIO_3 {
             apro++;
         }else
             repro++;
+
+         */
 
 
 
