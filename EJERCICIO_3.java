@@ -14,7 +14,7 @@ Elaborado: 3/11/23*/
 public class EJERCICIO_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int T, i;
+        int T, i,repro=0,apro=0;
         System.out.println("Cuantos alumnos hay en el grupo?");
         T = sc.nextInt();
         String nombre[] = new String[T];
@@ -23,6 +23,7 @@ public class EJERCICIO_3 {
         int unidadDos[] = new int[T];
         int unidadTres[] = new int[T];
         int promedio[] = new int[T];
+
         /*Aqui se limpian los vectores*/
         for (i = 0; i < T; i++) {
             lista[i] = 0;
@@ -31,58 +32,72 @@ public class EJERCICIO_3 {
             unidadTres[i] = 0;
             promedio[i] = 0;
         }
-        /*Pedir datos de nombre al usuario
-        *         for (i = 0; i < T; i++) {
+
+        /*Pedir datos de nombre al usuario*/
+        for (i = 0; i < T; i++) {
             System.out.println("Ingresa tu nombre Completo");
-            nombre[i] = sc.next();
-        }*/
+            for (i=0; i<T; i++) {
+                nombre[i] = sc.next();
+                /*Pedir datos de de numero de lista al usuario*/
+                do {
 
-        /*Pedir datos de de numero de lista al usuario*/
-        do {
-            for (i = 0; i < T; i++) {
-                System.out.println("Ingresa tu numero de lista: ");
-                lista[i] = sc.nextInt();
-                if (lista[i]>T){
-                    System.out.println("Numero de lista no valido");
-                }else
-                    break;
+                    for (i = 0; i < T; i++) {
+                        System.out.println("Ingresa tu numero de lista: ");
+                        lista[i] = sc.nextInt();
+                        if (lista[i]>T || lista[i]==0){
+                            System.out.println("Numero de lista no valido");
+                        }else
+                            break;
+                    }
+                }while (lista[i]>T);
+
+                /*Calificaciones pedidas al usuario*/
+                do {
+                    for (i = 0; i < T; i++) {
+                        System.out.println("Ingresa la calificacion de la unidad uno:");
+                        unidadUno[i] = sc.nextInt();
+                        if (unidadUno[i]>10){
+                            System.out.println("Calificacion no valida");
+                        }else
+                            break;
+                    }
+                    for (i = 0; i < T; i++) {
+                        System.out.println("Ingresa la calificacion de la unidad dos:");
+                        unidadDos[i] = sc.nextInt();
+                        if (unidadUno[i]>10){
+                            System.out.println("Calificacion no valida");
+                        }else
+                            break;
+                    }
+                    for (i = 0; i < T; i++) {
+                        System.out.println("Ingresa la calificacion de la unidad tres:");
+                        unidadTres[i] = sc.nextInt();
+                        if (unidadUno[i]>10){
+                            System.out.println("Calificacion no valida");
+                        }else
+                            break;
+                    }
+                }while (unidadUno[i]>10 || unidadDos[i]>10 || unidadTres[i]>10);
             }
-        }while (lista[i]>T);
+        }
 
 
-        /*Calificaciones pedidas al usuario*/
-        do {
-            for (i = 0; i < T; i++) {
-                System.out.println("Ingresa la calificacion de la unidad uno:");
-                unidadUno[i] = sc.nextInt();
-                if (unidadUno[i]>10){
-                    System.out.println("Calificacion no valida");
-                }else
-                    break;
-            }
-            for (i = 0; i < T; i++) {
-                System.out.println("Ingresa la calificacion de la unidad dos:");
-                unidadDos[i] = sc.nextInt();
-                if (unidadUno[i]>10){
-                    System.out.println("Calificacion no valida");
-                }else
-                    break;
-            }
-            for (i = 0; i < T; i++) {
-                System.out.println("Ingresa la calificacion de la unidad tres:");
-                unidadTres[i] = sc.nextInt();
-                if (unidadUno[i]>10){
-                    System.out.println("Calificacion no valida");
-                }else
-                    break;
-            }
-        }while (unidadUno[i]>10 || unidadDos[i]>10 || unidadTres[i]>10);
+
 
 
         /*Promedio*/
         for (i=0; i<T; i++){
             promedio[i]=unidadUno[i]+unidadDos[i]+unidadTres[i];
         }
+        for ( i = 0; i < T; i++) {
+            System.out.println(nombre[i].toString());
+        }
+        if (promedio[i]>=6){
+            apro++;
+        }else
+            repro++;
+
+
 
 
 
