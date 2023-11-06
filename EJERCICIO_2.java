@@ -11,8 +11,8 @@ Elaborado: 3/11/23
 public class EJERCICIO_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numeros[] = new int[15];
-        int numeroRotados[] = new int[15];
+        int []numeros = new int[15];
+        int []numeroRotados = new int[15];
         int i;
 
         for (i=0; i<numeros.length; i++){
