@@ -13,7 +13,7 @@ public class EJERCICIO_1 {
         int []numerosPa=new int[20];
         int []numerosIn=new int[20];
 
-        int i;
+        int i,par,impar;
 
         for (i=0; i<nums.length; i++){
             nums[i]=0;
@@ -25,15 +25,17 @@ public class EJERCICIO_1 {
             System.out.println("Ingresa los valores para ["+(i+1)+"] :");
             nums[i]= sc.nextInt();
             }
-    
+        par=0;
+        impar=0;
         for (i=0; i< nums.length; i++){
             if (nums[i]%2==0){
-                    numerosPa[i]=nums[i];
+                    numerosPa[par]=nums[i];
             }else{
-                numerosIn[i]=nums[i];
+                numerosIn[impar]=nums[i];
             }
-            System.out.println(numerosPa[i]+numerosIn[i]);
         }
+        System.out.println(numerosPa[par]);
+        System.out.println(numerosIn[impar]);
 
 
     }
