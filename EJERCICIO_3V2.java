@@ -15,23 +15,28 @@ public class EJERCICIO_3V2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T,i, repro=0,apro=0;
-
+        //Ingresar el tamaño del grupo
         System.out.println("Cuantos alumnos cursan la materia?");
         T = sc.nextInt();
+        //declaración y asignación de vectores
         String[] nombre = new String[T];
         int [] lista = new int[T];
         int []unidadUno = new int[T];
         int []unidadDos = new int[T];
         int []unidadTres = new int[T];
         int []promedio = new int[T];
+        //int []listas = new int[T];
 
-        //Limpair vectores
+        //Limpiar vectores
         for (i=0; i<T; i++){
             unidadUno[i]=0;
             unidadDos[i]=0;
             unidadTres[i]=0;
             promedio[i]=0;
+            //listas[i]=0;
         }
+        //System.out.println("Ingresen sus datos conforme la lista: ");
+        //System.out.println("--------------------------------------------------------------------");
         //pedir datos de nombre al usuario
         for (i=0; i<T; i++){
             //pedir nombre al alumno
@@ -72,9 +77,54 @@ public class EJERCICIO_3V2 {
             }while (unidadTres[i]>10 || unidadTres[i]<0);
 
 
-            System.out.println("Gracias por ingresar sus datos:");
+            System.out.println("Gracias por ingresar sus datos "+nombre[i]+" con el numero de lista: "+lista[i]);
             System.out.println("------------------------------------------------------------------------------------------");
         }
+        //promediar las calificaciones
+
+
+        for (i=0; i<T; i++){
+            promedio[i]=(unidadUno[i]+unidadDos[i]+unidadTres[i])/3;
+            if (promedio[i]<6){
+                repro++;
+            }else
+                apro++;
+        }
+        //condicionar la impresión de resultados hasta que se evalúe el ultímo alumno
+            for (i=0; i<1; i++){
+                promedio[i] = (unidadUno[i] + unidadDos[i] + unidadTres[i]) / 3;
+                for (int j=0; j<1; j++) {
+
+                    if (promedio[i] > 6) {
+                        System.out.println("El alumno " + nombre[i] + " con el numero de lista " + lista[i] + " tiene la calificación más alta");
+                        System.out.println("con un promedio de: "+promedio[i]);
+
+                    }
+
+                }
+            }
+            for (i=0; i<T; i++){
+                promedio[i] = (unidadUno[i] + unidadDos[i] + unidadTres[i]) / 3;
+                for (int j=0; j<1; j++) {
+                    if (promedio[i] < 6) {
+                        System.out.println("El alumno " + nombre[i] + " con el numero de lista " + lista[i] + " tiene la calificación más baja");
+                        System.out.println("con un promedio de: "+promedio[i]);
+
+                    }
+
+                }
+            }
+
+
+        //Impresión de resultados
+        System.out.println("-----CANTIDAD DE ALUMNOS APROBADOS Y REPROBADOS");
+        System.out.println("Aprobados: "+apro);
+        System.out.println("Reprobados: "+repro);
+
+
+
+
+
 
 
 
