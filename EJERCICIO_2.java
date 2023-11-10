@@ -12,7 +12,7 @@ public class EJERCICIO_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int []numeros = new int[15];
-        int []numeroRotados = new int[15];
+        int []numeroRotados = new int[16];
         int i;
 
         for (i=0; i<numeros.length; i++){
@@ -29,9 +29,10 @@ public class EJERCICIO_2 {
             System.out.println(numeros[i]);
         }
 
-        System.out.println("Arreglo rotado");
-        for (i=14; i>-1; i--){
-            numeroRotados[i]=numeros[i];
+        System.out.println("Arreglo con recorrido de una posición");
+        for (i=0; i<16; i++){
+            numeroRotados[0]=numeros[numeros.length-1];
+            numeroRotados[i+1]=numeros[i];
             System.out.println(numeroRotados[i]);
         }
     }
