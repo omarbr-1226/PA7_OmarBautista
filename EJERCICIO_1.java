@@ -10,17 +10,16 @@ public class EJERCICIO_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int []nums= new int[20];
-        int []numerosPa=new int[20];
-        int []numerosIn=new int[20];
-
+        int []numerosPa=new int[nums.length];
+        int []numerosIn=new int[nums.length];
         int i,par,impar;
 
         for (i=0; i<nums.length; i++){
             nums[i]=0;
             numerosPa[i]=0;
             numerosIn[i]=0;
-        }
 
+        }
         for (i=0; i< nums.length; i++){
             System.out.println("Ingresa los valores para ["+(i+1)+"] :");
             nums[i]= sc.nextInt();
@@ -29,13 +28,28 @@ public class EJERCICIO_1 {
         impar=0;
         for (i=0; i< nums.length; i++){
             if (nums[i]%2==0){
-                    numerosPa[par]=nums[i];
+                    numerosPa[par++]=nums[i];
             }else{
-                numerosIn[impar]=nums[i];
+                numerosIn[impar++]=nums[i];
             }
         }
-        System.out.println(numerosPa[par]);
-        System.out.println(numerosIn[impar]);
+        int[] arrayCombi = new int[numerosPa.length+ numerosIn.length];
+        for (i=0; i< nums.length; i++){
+            arrayCombi[i]=0;
+        }
+        for(i=0; i< numerosPa.length; i++){
+            arrayCombi[i]=numerosPa[i];
+        }
+        for (i=0; i< numerosIn.length; i++){
+            arrayCombi[i+ numerosPa.length]=numerosIn[i];
+        }
+        for (int num:arrayCombi){
+            System.out.println(num);
+
+        }
+
+
+
 
 
     }

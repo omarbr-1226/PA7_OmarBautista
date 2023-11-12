@@ -74,7 +74,6 @@ public class EJERCICIO_3V2 {
                 }
             }while (unidadTres[i]>10 || unidadTres[i]<0);
 
-
             System.out.println("Gracias por ingresar sus datos "+nombre[i]+" con el numero de lista: "+lista[i]);
             System.out.println("------------------------------------------------------------------------------------------");
             promedio[i]=(unidadUno[i]+unidadDos[i]+unidadTres[i])/3;
@@ -93,21 +92,11 @@ public class EJERCICIO_3V2 {
                 posiMin=i;
             }
         }
-
         //Impresión de resultados
         System.out.println("El alumno "+nombre[posiMax]+" con el numero de lista "+lista[posiMax]+" tiene un promedio de "+promMax);
         System.out.println("El alumno "+nombre[posiMin]+" con el numero de lista "+lista[posiMin]+" tiene un promedio de "+promMin);
         System.out.println("-----------------CANTIDAD DE ALUMNOS APROBADOS Y REPROBADOS-----------------");
         System.out.println("Aprobados: "+apro);
         System.out.println("Reprobados: "+repro);
-
-
-
-
-
-
-
-
-
     }
 }
