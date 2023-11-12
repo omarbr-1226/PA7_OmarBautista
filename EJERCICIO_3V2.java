@@ -19,22 +19,19 @@ public class EJERCICIO_3V2 {
         //Ingresar el tamaño del grupo
         System.out.println("Cuantos alumnos cursan la materia?");
         T = sc.nextInt();
-        //declaración y asignación de vectores
+        //declaración de vectores
         String[] nombre = new String[T];
         int [] lista = new int[T];
         int []unidadUno = new int[T];
         int []unidadDos = new int[T];
         int []unidadTres = new int[T];
         int []promedio = new int[T];
-        //int []listas = new int[T];
-
         //Limpiar vectores
         for (i=0; i<T; i++){
             unidadUno[i]=0;
             unidadDos[i]=0;
             unidadTres[i]=0;
             promedio[i]=0;
-            //listas[i]=0;
         }
         //System.out.println("Ingresen sus datos conforme la lista: ");
         System.out.println("--------------------------------------------------------------------");
