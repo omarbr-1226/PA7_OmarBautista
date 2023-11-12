@@ -19,7 +19,6 @@ public class EJERCICIO_2 {
             numeros[i]=0;
             numeroRotados[i]=0;
         }
-
         for (i=0; i<numeros.length; i++){
             System.out.println("Ingresa los numeros para ["+(i+1)+"]:");
             numeros[i]= sc.nextInt();
@@ -28,10 +27,9 @@ public class EJERCICIO_2 {
         for (i=0; i<15; i++){
             System.out.println(numeros[i]);
         }
-
+        numeroRotados[0]=numeros[numeros.length-1];
         System.out.println("Arreglo con recorrido de una posición");
-        for (i=0; i<16; i++){
-            numeroRotados[0]=numeros[numeros.length-1];
+        for (i=0; i<15; i++){
             numeroRotados[i+1]=numeros[i];
             System.out.println(numeroRotados[i]);
         }
