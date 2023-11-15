@@ -50,7 +50,7 @@ public class EJERCICIO_3V2 {
             }while (lista[i]==0 || lista[i]>T);
             //ciclos controlados para las calificaciones
             //unidad uno
-            do {
+            do {    
                 System.out.println("Ingresa las calificaciones de la unidad uno: ");
                 unidadUno[i]= sc.nextInt();
                 if (unidadUno[i]>10 || unidadUno[i]<0){
